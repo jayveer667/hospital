@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LifeCare Hospital</title>
+
+<style>
+    /* Reset default spacing */
+    /* Sabka default margin hatao */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body bhi clean */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar */
+.navbar {
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+
+/* Navbar ke turant baad jo bhi section hai */
+.navbar + * {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed;   /* agar fixed nahi chahiye to is line ko hata sakte ho */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(to right, #0f9dbb, #6dd5ed);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Nav links */
+.nav-links a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Hero / next section */
+.hero {
+  margin-top: 70px;   /* 👈 IMPORTANT: navbar height ke equal */
+  min-height: 100vh;
+  background: #f5f5f5;
+  padding: 40px;
+}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#f4f9fb;scroll-behavior:smooth;}
+
+/* NAVBAR */
+header{
+position:fixed;
+top:0;width:100%;
+background:linear-gradient(135deg,#0077b6,#00b4d8,#90e0ef);
+color:white;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 40px;
+z-index:1000;
+box-shadow:0 4px 15px rgba(0,0,0,0.2);
+}
+
+.logo{
+font-size:22px;
+font-weight:bold;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo span{
+background:white;
+color:#0077b6;
+padding:5px 10px;
+border-radius:50%;
+font-weight:bold;
+}
+
+nav a{
+color:white;
+margin:0 10px;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+nav a:hover{color:#023e8a;}
+
+/* REMOVE GAP */
+section{padding:80px 20px;}
+#home{margin-top:70px;}
+
+h2{text-align:center;margin-bottom:30px;}
+
+/* SLIDER */
+.slider{
+height:90vh;
+position:relative;
+overflow:hidden;
+}
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:1s;
+}
+.slide.active{opacity:1;}
+
+.overlay{
+background:rgba(0,0,0,0.5);
+height:100%;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+flex-direction:column;
+padding:20px;
+}
+
+.btn{
+background:linear-gradient(135deg,#00b4d8,#0077b6);
+padding:12px 25px;
+color:white;
+border:none;
+border-radius:30px;
+cursor:pointer;
+margin-top:15px;
+}
+
+/* CARDS */
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+border-radius:15px;
+overflow:hidden;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+.card:hover{transform:translateY(-10px);}
+
+.card img{width:100%;height:220px;object-fit:cover;}
+
+.card-content{padding:15px;}
+
+/* DOCTORS */
+.doctor-card{text-align:center;}
+.doctor-card img{
+width:120px;height:120px;
+border-radius:50%;
+margin-top:15px;
+border:4px solid #00b4d8;
+}
+
+/* EMERGENCY BUTTON */
+.emergency-btn{
+position:fixed;
+bottom:20px;
+right:20px;
+background:red;
+color:white;
+padding:15px;
+border-radius:50%;
+font-size:20px;
+box-shadow:0 5px 15px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="logo">
+<span>+</span> LifeCare
+</div>
+
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#doctors">Doctors</a>
+<a href="#testimonials">Reviews</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+<!-- SLIDER -->
+<section id="home" class="slider">
+
+<div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3')">
+<div class="overlay">
+<h1>LifeCare Hospital</h1>
+<p>Advanced Healthcare Services</p>
+<button class="btn">Emergency: 108</button>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1579154204601-01588f351e67')">
+<div class="overlay">
+<h1>24/7 Emergency Care</h1>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1580281657527-47f249e9f1d5')">
+<div class="overlay">
+<h1>Expert Doctors</h1>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1606813909355-75cfe1b5e36f')">
+<div class="overlay">
+<h1>Modern Equipment</h1>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b')">
+<div class="overlay">
+<h1>Patient Care First</h1>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('https://images.unsplash.com/photo-1588776814546-1ffcf47267a5')">
+<div class="overlay">
+<h1>Trusted Healthcare</h1>
+</div>
+</div>
+
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<h2>Our Services</h2>
+<div class="grid">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<div class="card-content"><h3>Cardiology</h3></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581056771107-24ca5f033842">
+<div class="card-content"><h3>ICU</h3></div>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="card-content"><h3>Emergency</h3></div>
+</div>
+
+</div>
+</section>
+
+<!-- DOCTORS -->
+<section id="doctors">
+<h2>Our Doctors</h2>
+
+<div class="grid">
+
+<div class="card doctor-card">
+<img src="https://randomuser.me/api/portraits/men/32.jpg">
+<div class="card-content">
+<h3>Dr. Raj Sharma</h3>
+<p>Cardiologist</p>
+<p>MBBS, MD</p>
+</div>
+</div>
+
+<div class="card doctor-card">
+<img src="https://randomuser.me/api/portraits/women/44.jpg">
+<div class="card-content">
+<h3>Dr. Neha Mehta</h3>
+<p>Neurologist</p>
+<p>MBBS, DM</p>
+</div>
+</div>
+
+<div class="card doctor-card">
+<img src="https://randomuser.me/api/portraits/men/50.jpg">
+<div class="card-content">
+<h3>Dr. Amit Verma</h3>
+<p>Orthopedic</p>
+<p>MBBS, MS</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+<h2>Patient Reviews</h2>
+<p style="text-align:center;">"Excellent service and doctors!"</p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+<p style="text-align:center;">📍 Jaipur, Rajasthan</p>
+<p style="text-align:center;">📞 9876543210</p>
+</section>
+
+<a href="tel:108" class="emergency-btn">🚑</a>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let i=0;
+
+setInterval(()=>{
+slides[i].classList.remove('active');
+i=(i+1)%slides.length;
+slides[i].classList.add('active');
+},3000);
+</script>
+
+</body>
+</html>
